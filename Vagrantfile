@@ -22,6 +22,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install python-setuptools
     sudo easy_install-2.7 pip==20.3.4
     sudo apt-get install -y python-dev
+    sudo echo "[global] \n index-url = https://pypi.tuna.tsinghua.edu.cn/simple" > ~/.pip/pip.conf
     sudo apt-get install -y apache2-utils
     sudo apt-get install -y git
     # The commands below are for assignment 2. We expect that the
