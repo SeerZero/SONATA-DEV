@@ -20,6 +20,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y python-dev
+    sudo echo "[global] \n index-url = https://pypi.tuna.tsinghua.edu.cn/simple" > ~/.pip/pip.conf
     #sudo apt-get install -y python-pip
     wget https://bootstrap.pypa.io/get-pip.py 
     sudo python ./get-pip.py
